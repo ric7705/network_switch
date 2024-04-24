@@ -41,10 +41,11 @@
                             <button type="button" class="btn btn-primary btn-lg" id="switch_to_linea">Linea</button>
                         </div>
 
-                        <!-- <div class="col d-flex align-items-end">
-                            <button type="button" class="btn btn-primary btn-lg" id="none_7">None</button>
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="switch_to_xterio">Xterio</button>
                         </div>
-
+                        
+                        <!--
                         <div class="col d-flex align-items-end">
                             <button type="button" class="btn btn-primary btn-lg" id="none_8">None</button>
                         </div>
@@ -146,8 +147,20 @@
                 console.log(err)
             }
         });
+        
+        document.getElementById('switch_to_xterio').addEventListener('click', function () {
+            try {
+                const chain_id = "0x1b207"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
 
-
+        
     </script>
 </body>
 

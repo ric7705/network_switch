@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+            <div class="col">
+                <h2 class="mt-5">切換網路:</h2>
+                <form id="staticStrForm" class="mt-3">
+                    <div class="form-row">
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_op">OP</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_arb">ARB</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_zksync">ZKSYNC</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_bsc">BSC</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_eth">ETH</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="switch_to_linea">Linea</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_7">None</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_8">None</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_9">None</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_10">None</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_11">None</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-secondary" id="none_12">None</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 引入 Bootstrap JavaScript 和相依性的 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- 引入 Clipboard.js -->
+
+
+    <script>
+
+        document.getElementById('switch_to_op').addEventListener('click', function () {
+            try {
+                const chain_id = "0xa"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+        document.getElementById('switch_to_arb').addEventListener('click', function () {
+            try {
+                const chain_id = "0xa4b1"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+        document.getElementById('switch_to_bsc').addEventListener('click', function () {
+            try {
+                const chain_id = "0x38"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+        document.getElementById('switch_to_eth').addEventListener('click', function () {
+            try {
+                const chain_id = "0x1"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+        document.getElementById('switch_to_zksync').addEventListener('click', function () {
+            try {
+                const chain_id = "0x144"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+        document.getElementById('switch_to_linea').addEventListener('click', function () {
+            try {
+                const chain_id = "0xe708"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

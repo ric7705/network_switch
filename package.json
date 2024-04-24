@@ -1,0 +1,23 @@
+{
+  "name": "network_switch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ric7705/network_swicth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ric7705/network_swicth/issues"
+  },
+  "homepage": "https://github.com/ric7705/network_swicth#readme",
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

@@ -66,6 +66,39 @@
                             <button type="button" class="btn btn-primary btn-lg" id="none_12">None</button>
                         </div> -->
                     </div>
+                    <br>
+                    
+                    <div class="form-row">
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="switch_to_scroll">SCROLL</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="switch_to_zora">ZORA</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="555">X</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="444">X</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="333">X</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="222">X</button>
+                        </div>
+
+                        <div class="col d-flex align-items-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="111">X</button>
+                        </div>
+                        
+                    </div>
                 </form>
             </div>
         </div>
@@ -151,6 +184,30 @@
         document.getElementById('switch_to_xterio').addEventListener('click', function () {
             try {
                 const chain_id = "0x1b6e6"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+
+        document.getElementById('switch_to_zora').addEventListener('click', function () {
+            try {
+                const chain_id = "0x76adf1"
+                okexchain.request({
+                    method: "wallet_switchEthereumChain",
+                    params: [{ chainId: chain_id }]
+                });
+            } catch (error) {
+                console.log(err)
+            }
+        });
+
+        document.getElementById('switch_to_scroll').addEventListener('click', function () {
+            try {
+                const chain_id = "0x82750"
                 okexchain.request({
                     method: "wallet_switchEthereumChain",
                     params: [{ chainId: chain_id }]

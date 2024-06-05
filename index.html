@@ -13,6 +13,8 @@
     <div class="container-fluid">
 
             <div class="col">
+                <h2 id="env_name" class="mt-5"></h2>
+
                 <h2 class="mt-5">切換網路:</h2>
                 <form id="staticStrForm" class="mt-3">
                     <div class="form-row">
@@ -219,6 +221,20 @@
 
         
     </script>
+
+
+<script>
+    window.onload = function() {
+        // 从 URL 中获取参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const envId = urlParams.get('env');
+
+        // 设置页面标题
+        document.title = envId;
+        const envNameElement = document.getElementById('env_name');
+        envNameElement.textContent = "環境: " + envId;
+    };
+</script>
 </body>
 
 </html>
